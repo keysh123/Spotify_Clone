@@ -1,2 +1,2 @@
 # Spotify_Clone
-A responsive and polished frontend-only Spotify clone built with React.js and Tailwind CSS. It replicates core UI elements like sidebar, navbar, playlists, and songs. No backend/audio streaming—limited tracks are stored locally in assets for mock interaction.
+A responsive and modern frontend clone of Spotify built with React.js and Tailwind CSS. This project replicates the look and feel of the Spotify web player, including components like the sidebar, navigation bar, playlists, and a song display interface. This is a frontend-only implementation — no backend or actual music streaming functionality.
