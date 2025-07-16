@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { albumsData } from "../assets/assets";
+import { albumsData , songsData } from "../assets/assets";
 import AlbumItem from "./AlbumItem";
+import SongItem from "./SongItem";
 
 const DisplayHome = () => {
   return (
@@ -22,15 +23,18 @@ const DisplayHome = () => {
             );
           })}
         </div>
+      </div>
+      <div className="mb-4 ">
+        <h1 className="my-5 font-bold text-2xl">Today's Biggest Hits</h1>
         <div className="flex overflow-auto">
-          {albumsData.map((album, idx) => {
+          {songsData.map((song, idx) => {
             return (
-              <AlbumItem
+              <SongItem
                 key={idx}
-                img={album.image}
-                desc={album.desc}
-                id={album.id}
-                name={album.name}
+                img={song.image}
+                desc={song.desc}
+                id={song.id}
+                name={song.name}
               />
             );
           })}
