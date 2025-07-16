@@ -27,6 +27,33 @@ const PlayerContextProvider = ({ children }) => {
      audioRef.current.pause();
       setPlayStatus(false);
     } 
+  
+    const playWithId = async (id) => {
+     await setTrack(songsData[id]);
+      audioRef.current.src = songsData[id].file;
+     await audioRef.current.play();
+      setPlayStatus(true);
+    }
+    const playPrevious = () => {
+      const currentIndex = songsData.findIndex(song => song.id === track.id);
+      const previousIndex = (currentIndex - 1 + songsData.length) % songsData.length;
+      playWithId(previousIndex);
+    }
+    const playNext = () => {
+      const currentIndex = songsData.findIndex(song => song.id === track.id);
+      const nextIndex = (currentIndex + 1) % songsData.length;
+      playWithId(nextIndex);
+    }
+    const seekSong = async (e) => {
+
+      const seekWidth = seekBg.current.offsetWidth;
+      const clickX = e.nativeEvent.offsetX;
+      const duration = audioRef.current.duration;
+      audioRef.current.currentTime = (clickX / seekWidth) * duration;
+      
+      
+
+    }
     useEffect(()=>{
       setTimeout(()=>{
         audioRef.current.ontimeupdate = () => {
@@ -61,7 +88,11 @@ const PlayerContextProvider = ({ children }) => {
     time,
     setTime,
     play,
-    pause
+    pause,
+    playWithId,
+    playPrevious,
+    playNext,
+    seekSong
 
   };
 
