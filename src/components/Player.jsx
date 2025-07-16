@@ -1,6 +1,6 @@
 import React from 'react'
 import {assets , songsData} from '../assets/assets'
-import { PlayerContext } from '../context/playerContext';
+import { PlayerContext } from '../context/PlayerContext';
 
 const Player = () => {
     const {seekBg, seekBar, audioRef , playStatus , play , pause ,track , time ,playPrevious , playNext , seekSong} = React.useContext(PlayerContext);

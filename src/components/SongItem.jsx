@@ -1,5 +1,5 @@
 import React from 'react'
-import { PlayerContext } from '../context/playerContext';
+import { PlayerContext } from '../context/PlayerContext';
 
 const SongItem = ({name , img , desc , id}) => {
   const {playWithId} = React.useContext(PlayerContext);
