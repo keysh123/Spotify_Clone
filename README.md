@@ -11,4 +11,4 @@ Song display interface
 
 ⚠️ This is a frontend-only implementation. It does not include backend integration or actual music streaming functionality.
 
-🔗 Live Demo: spotifyclonebasic1.netlify.app
+🔗 Live Demo:  https://spotifyclonebasic1.netlify.app/
